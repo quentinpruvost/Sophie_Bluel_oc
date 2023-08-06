@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/44d3f60ba9.js" crossorigin="anonymous"></script>
+</head>
+
+<!--BANNIERE MODE EDITION-->
+<div class="edition-mode__container" style="display: none;">
+	<div class="mode-edition">
+		<i class="fa-regular fa-pen-to-square"></i>
+		<span>Mode édition</span>
+	</div>
+	<button>publier les changements</button>
+</div>
+<body> 
+
+	<!--PREMIERE MODALE DE SUPPRESSION-->
+	<aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none">
+		<div class="modal-wrapper js-modal-stop">
+			<i class="leave js-close-modal fa-solid fa-xmark"></i>
+			<h3 id="titlemodal">Galerie photo</h3>
+			<div class="modal__gallery">
+				<!--contiendra les photos miniatures-->  
+			</div>
+			<div class="bottom__gallery">
+				<input href="#modal-Form" class="js-modal-Form" type="submit" value="Ajouter une photo">
+				<span class="delete__gallery">Supprimer la galerie</span>
+			</div>
+		</div>
+	</aside>
+
+	<!--DEUXIEME MODALE D'AJOUT DE FICHIER-->
+	<aside id="modal-Form" class="modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none;">
+		<div class="modal-wrapper js-modal-stop">
+			<i class="leave js-close-modal fa-solid fa-xmark"></i>
+			<i class="fa-solid fa-arrow-left backward"></i>
+			<h3 id="titlemodal">Ajout photo</h3>
+			<span class="error-message"></span>
+			<div class="modal__body">
+				<div class="modal-img-container">
+					<figure class="image-container">
+						<img id="chosen-image" src="" alt="">
+					</figure>
+					<label for="upload-button" class="label-file">
+						<i class="img-icon fa-regular fa-image"></i>
+						<span class="upload-button__btn">+ Ajouter photo</span>
+						<span>jpg, png : 4mo max</span>
+					</label>
+					<input id="upload-button" class="input-file" type="file">
+					
+				</div>
+				<form id="photo-submit" action="#" method="post">
+					<label for="name">Nom</label>
+					<input type="text" name="name" id="name">
+					<label for="categorie">Catégorie</label>
+					<select type="categorie" name="format" id="category">
+						<option selected disabled value=""></option>
+						<option data-btn="3" value="Hôtels & restaurants">Hôtels & restaurants</option>
+						<option data-btn="1" value="Objets">Objets</option>
+						<option data-btn="2" value="Appartements">Appartements</option>
+					</select>
+					<input type="submit" value="Valider">
+				</form>
+			</div>
+		</div>
+	</aside>
+<header>
+	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+
+	<!--NAVIGATION-->
+	<nav>
+		<ul>
+			<li id="projets">projets</li>
+			<li>contact</li>
+			<li><a class="login__btn" href="./pages/login.html">login</a></li>
+			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<section id="introduction">
+		<figure>
+			<img src="./assets/images/sophie-bluel.png" alt="">	
+		</figure>
+		<article>
+
+			<h2>Designer d'espace</h2>
+			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+		</article>
+
+		<!--SECTION GALERIE-->
+	</section>
+	<section id="portfolio">
+		<div class="modal__btn--container">
+			<h2>Mes Projets</h2>
+			<a class="modal__link js-modal" href="#modal1" style="display: none;"">
+				<i href="#modal1" class=" js-modal fa-regular fa-pen-to-square"></i>
+				<span href="#modal1" class="js-modal">modifier</span>
+			</a>
+		</div>
+		<div class="buttons">
+			<button class="btn-clicked" type="button">Tous</button>
+			<button type="button" data-btn="1">Objets</button>
+			<button type="button" data-btn="2">Appartements</button>
+			<button type="button" data-btn="3">Hôtels & restaurants</button>
+		</div>
+
+		<div class="gallery">
+			<!-----EMPLACEMENT POUR LES PHOTOS DE L'API-->
+		</div>
+	</section>
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>Vous avez un projet ? Discutons-en !</p>
+		<form action="#" method="post">
+			<label for="name">Nom</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			<input type="submit" value="Envoyer">
+		</form>
+	</section>
+</main>
+
+<footer>
+	<nav>
+		<ul>
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+<script src="./script/index.js"></script>
+</body>
+</html>

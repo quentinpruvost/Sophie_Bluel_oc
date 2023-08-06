@@ -1,0 +1,581 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+/**********************************/
+
+.login h2 {
+    margin-top: 5em;
+    text-align: center;
+}
+
+#login-form {
+    text-align: left;
+    margin-top:27px;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: auto;
+}
+#login-form input {
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#login-form label {
+    margin: 2em 0 1em 0;
+}
+
+#login-form textarea {
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.login-form-oublie {
+    text-align: center ;
+    color: black;
+}
+
+.modal__btn--container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2rem;
+}
+/* ------- FILTRES ------- */
+.buttons {
+    display: flex;
+    margin: 3rem auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    
+}
+
+.btn-clicked {
+    border: none !important;
+    background-color: #1D6154 !important;
+    color: white !important;
+}
+
+.buttons button {
+    font-family: 'Syne';
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 9px 30px;
+    border-radius: 60px;
+    cursor: pointer;
+    border: 1px solid #1D6154;
+    color: #1D6154;
+    background-color: transparent;
+}
+
+.img-expand {
+    display: block;
+}
+
+.img-shrink {
+    display: none;
+}
+
+/* ------ MODALS ------ */
+
+.modal__link {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.modal__link_bis {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#modal1, #modal-Form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-wrapper {
+    width: 25%;
+    height: 70%;
+    padding: 2.5rem;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal h3 {
+    text-align: center;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    margin: 2rem 0;
+}
+
+.leave {
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.5em;
+}
+
+.backward {
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal__gallery {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0.5rem;
+    gap: 6px;
+    margin-bottom: 2rem;
+    padding-bottom: 4rem;
+    height: auto;
+    max-height: 300px;
+}
+
+.modal__gallery::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #B3B3B3;
+}
+
+.modal__figure {
+    width: 25%;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.modal__figure i {
+    color: white;
+    z-index: 1;
+    position: absolute;
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 2px;
+    border: 1px;
+    cursor: pointer;
+}
+
+.trash {
+    top: 0.5em;
+    right: 1.5em;
+}
+
+.direction {
+    top: 0.5em;
+    right: 3em;
+}
+
+.modal__figure figcaption {
+    font-family: 'Work Sans';
+    font-size: 0.875rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.modal__figure img {
+    width: 100%;
+    position: relative;
+    object-fit: contain;
+    max-height: 100px;
+}
+
+.bottom__gallery {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.bottom__gallery input {
+    cursor: pointer;
+    margin: 1rem;
+    padding: 0.5rem 0;
+    font-size: 15px;
+    width: 237px;
+    border: none;
+    text-decoration: none;
+}
+
+.delete__gallery {
+    cursor: pointer;
+    font-family: 'Syne';
+    font-weight: 400;
+    font-size: 14px;
+    color: #D65353;
+}
+
+.modal__body {
+    position: relative;
+}
+
+.modal__body::before {
+    content: "";
+    position: absolute;
+    bottom: 110px;
+    width: 100%;
+    height: 1px;
+    background-color: #B3B3B3;
+}
+
+.modal-img-container {
+    position: relative;
+    background-color: #E8F1F7;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    min-height: 150px;
+    max-height: 200px;
+}
+
+#chosen-image {
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    min-height: 150px;
+    max-height: 200px;
+    max-width: 150px;
+}
+
+.img-icon {
+    color: #B9C5CC;
+    font-size: 4rem;
+}
+
+.modal__body form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.modal__body input,
+.modal__body select {
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+    margin-bottom: 1rem;
+}
+
+.modal__body select {
+    appearance: none;
+}
+
+.modal__body select::after {
+    content: '/25BC';
+}
+
+.label-file {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.upload-button__btn {
+    background-color: #CBD6DC;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    color: #306685;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.input-file {
+    display: none;
+}
+
+.login__btn {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* BANNIERE EDITION */
+
+.edition-mode__container {
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-left: calc(-50vw + 50%);
+}
+.edition-mode__container i {
+    color: white;
+}
+.edition-mode__container span {
+    font-family: 'Work Sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.mode-edition {
+    cursor: pointer;
+}
+
+.edition-mode__container button {
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+    padding: 10px 20px;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+}
+.modal__figure .move {
+    display: none;
+  }
+  
+  .modal__figure:hover .move {
+    display: block;
+  }
+  .modal__figure .move {
+    display: none;
+    position: absolute;
+    top: 18%;
+    left: 25px;
+    transform: translateY(-50%);
+  }
+  
+  .modal__figure:hover .move {
+    display: block;
+  }
+/* Ajoutez une classe au lien contenant le bouton modifier pour le cibler spécifiquement */
+.btn_modif {
+    position: relative;
+    left: 60px;
+}
+
+  
