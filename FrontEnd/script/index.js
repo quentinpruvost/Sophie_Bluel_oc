@@ -299,6 +299,7 @@ function deleteImg(e) {  //réponse à l'écouteur d'évènement créé dans la 
 
 // AJOUT DES IMAGES
 
+
 let photoForm = document.getElementById('photo-submit');
 const submitButton = photoForm.querySelector('input[type^="sub"]');
 let btnValue = null;
