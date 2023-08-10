@@ -298,7 +298,32 @@ function deleteImg(e) {  //réponse à l'écouteur d'évènement créé dans la 
 }
 
 // AJOUT DES IMAGES
+// Fonction pour récupérer et afficher les catégories dans le menu déroulant
+function fetchAndPopulateCategories() {
+  fetch('http://localhost:5678/api/categories')
+      .then(response => response.json())
+      .then(categories => {
+          const categorySelect = document.getElementById('category');
 
+          categories.forEach(category => {
+              const option = document.createElement('option');
+              option.value = category.id;
+              option.textContent = category.name;
+
+              // Ajout de l'attribut data-btn avec la valeur de la catégorie
+              option.setAttribute('data-btn', category.id);
+
+              categorySelect.appendChild(option);
+          });
+      })
+      .catch(error => {
+          console.error('Une erreur s\'est produite lors de la récupération des catégories :', error);
+      });
+}
+
+
+// Appelle la fonction pour récupérer et afficher les catégories
+fetchAndPopulateCategories();
 
 let photoForm = document.getElementById('photo-submit');
 const submitButton = photoForm.querySelector('input[type^="sub"]');
