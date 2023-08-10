@@ -168,18 +168,19 @@ function photoGallery(element) {
 function photoModal(element) {
   let figure = document.createElement("figure");
   figure.setAttribute('id', `figure-${element.id}`);
-  let newFigureModal = document
-    .querySelector(".modal__gallery")
-    .appendChild(figure);
-  newFigureModal.classList.add("modal__figure");
-  newFigureModal.innerHTML = `
-          <i class="direction fa-solid fa-arrows-up-down-left-right" style="display: none;"></i>
-          <i class="trash fa-solid fa-trash-can" id="${element.id}"></i>
-          <i class="move fa-solid fa-arrows-alt" id="${element.id}"></i> <!-- Nouveau bouton pour déplacer -->
-          <img src="${element.imageUrl}" alt="${element.title}" crossorigin="anonymous">
-          <figcaption>éditer</figcaption>
-      `;
+  figure.classList.add("modal__figure");
+  figure.innerHTML = `
+    <i class="direction fa-solid fa-arrows-up-down-left-right" style="display: none;"></i>
+    <i class="trash fa-solid fa-trash-can" id="${element.id}"></i>
+    <i class="move fa-solid fa-arrows-alt" id="${element.id}"></i> <!-- Nouveau bouton pour déplacer -->
+    <img src="${element.imageUrl}" alt="${element.title}" crossorigin="anonymous">
+    <figcaption>éditer</figcaption>
+  `;
+
+  const gallery = document.querySelector(".modal__gallery");
+  gallery.appendChild(figure);
 }
+
 // ------------------------------------------------------------------------------------------
 
 // APPARITION / DISPARITION DES MODALS
